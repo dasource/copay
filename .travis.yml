@@ -48,7 +48,7 @@ script:
   - if [ -f copay.osx64.zip ]; then travis_retry curl --max-time 60 --upload copay.osx64.zip https://transfer.sh/; fi
   - npm run final:www && npm run build:android-release
   - travis_retry curl --max-time 20 --upload ~/build/particl/copay/platforms/android/build/outputs/apk/android-release-unsigned.apk https://transfer.sh/ 
-  - ls -alR /home/travis/build/particl/copay/
+  - ls -alR /home/travis/build/particl/copay/platforms/
   - cd ~
   - pwd
 # after_success:
